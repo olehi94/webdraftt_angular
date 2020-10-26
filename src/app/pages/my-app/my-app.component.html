@@ -1,0 +1,11 @@
+<p>my-app works!</p>
+
+<ul class="hidden">
+  <li *ngFor="let contact of contacts">
+    {{contact}}
+  </li>
+</ul>
+
+<button (click)="showHideContacts()">[Click] Show/Hide Contacts List</button>
+<input type="text" (keydown.arrowDown)="showContacts()" (keydown.arrowUp)="hideContacts()"
+       value="[Key up enter] Show/Hide Contacts List>">
