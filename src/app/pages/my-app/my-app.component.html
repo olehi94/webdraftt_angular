@@ -1,0 +1,10 @@
+<a [href]="homePageUrl" [class.red-text]="isRed" target="_blank">
+  {{printGreeting('Dnoo')}}
+</a>
+<div [style.width.%]="isHalf ? 50 : 100">Some text.</div>
+
+<div [style.color]="colorRed">Some text.</div>
+<div [style.color]="'red'">Some text.</div>
+
+<input class="dd" value="123123" #name (click)="log($event)">
+<div>{{name.value}}</div>
