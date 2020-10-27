@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
-  contactPerson = 'Some string value';
+  contactPerson: string;
 
   constructor() { }
+
+  showParentData(): void {
+    this.contactPerson = 'Parent';
+  }
 
   ngOnInit(): void {
   }

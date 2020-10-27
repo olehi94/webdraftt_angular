@@ -7,8 +7,14 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class ContactsItemComponent {
 
-  @Input() name: string;
+  @Input() name = 'Unknown';
+  @Output() nameChange = new EventEmitter<string>();
 
   constructor() { }
+
+  showChildData(): void {
+    this.name = 'Child';
+    this.nameChange.emit(this.name);
+  }
 
 }

@@ -1,7 +1,6 @@
-<hr>
-Parent
-<div>{{contactPerson}}</div>
-<hr>
+<p>PARENT contacts works!</p>
 
-<contacts-item [name] = "contactPerson"></contacts-item>
+<contacts-item [(name)] = "contactPerson"></contacts-item>
 
+<p>{{ contactPerson }}</p>
+<button (click)= "showParentData()">Show parent</button>
