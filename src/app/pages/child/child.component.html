@@ -1,2 +1,2 @@
-<p>{{messageChild || 'empty message child'}}</p>
-<button (click)="setMessage()">Set message from child</button>
+<p>{{nameCh || 'empty'}}</p>
+<button (click)="this.nameChChange.emit('Matvey')">Set child</button>

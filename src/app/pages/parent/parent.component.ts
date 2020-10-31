@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
-  messageParent: string;
+  nameP: string;
 
-  changeMessage(): void {
-    this.messageParent = 'Message from Oleh';
+  changeParent(): void {
+    this.nameP = 'Oleh';
   }
-
 }
