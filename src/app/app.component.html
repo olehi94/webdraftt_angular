@@ -1,0 +1,37 @@
+<div *ngIf="true">DNOOOO see</div>
+<div *ngIf="false">DNOOOO not see</div>
+<hr>
+
+<ul>
+  <li *ngFor="let car of cars; let i = index; let o = odd;">
+    {{i + 1}}. {{car.name}} {{car.year}} {{o}}
+  </li>
+</ul>
+<hr>
+
+<ng-container *ngFor="let car of cars">
+  <p [textContent]="car.name">
+  </p>
+  <p [textContent]="car.year">
+  </p>
+</ng-container>
+<hr>
+
+<div [ngSwitch]="car">
+  <p *ngSwitchCase="'BMW'">This is BMW</p>
+  <p *ngSwitchCase="'Audi'">This is Audi</p>
+  <p *ngSwitchCase="'Ford'">This is Ford</p>
+  <p *ngSwitchDefault>This is ZAZ</p>
+</div>
+<hr>
+
+<p [ngStyle]="elementStyles">CSS</p>
+<p [ngStyle]="{color: car === 'Audi' ? 'green' : 'red'}">CSS expresion</p>
+<p [ngClass]="'first second'">CLASS_1</p>
+<p [ngClass]="{'first': true, 'second': false}">CLASS_2</p>
+<p class="dno" [ngClass]="{'first second third': true}">CLASS_3</p>
+
+
+<hr>
+
+
