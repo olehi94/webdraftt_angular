@@ -1,2 +1,3 @@
-<app-child [iValue]="'gggggg'"></app-child>
-<app-some></app-some>
+<p>{{message || '-'}}</p>
+<app-child (message)="setMessage($event)"></app-child>
+

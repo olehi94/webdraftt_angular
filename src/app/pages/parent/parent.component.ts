@@ -1,19 +1,14 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {ChildComponent} from '../child/child.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css']
 })
-export class ParentComponent implements AfterViewInit {
+export class ParentComponent {
+  message: string;
 
-  @ViewChild(ChildComponent) child: ChildComponent;
-
-  ngAfterViewInit(): void {
-    console.log(this.child.headline);
-    console.log(this.child.iValue);
+  setMessage(message: string): void {
+    this.message = message;
   }
-
-
 }
