@@ -10,7 +10,6 @@ export class ChildComponent {
   @Output() changeMessageChild: EventEmitter<string> = new EventEmitter<string>();
 
   setMessage(): void {
-    this.messageChild = 'Message from Matvey';
-    this.changeMessageChild.emit(this.messageChild);
+    this.changeMessageChild.emit('Message from Matvey');
   }
 }

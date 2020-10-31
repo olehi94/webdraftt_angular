@@ -12,8 +12,4 @@ export class ParentComponent {
     this.messageParent = 'Message from Oleh';
   }
 
-  setMessage(message: string): void {
-    this.messageParent = message;
-  }
-
 }

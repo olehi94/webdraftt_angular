@@ -3,4 +3,4 @@
 <hr>
 
 
-<app-child [messageChild]="messageParent" (changeMessageChild)="setMessage($event)"></app-child>
+<app-child [messageChild]="messageParent" (changeMessageChild)="messageParent = $event"></app-child>
