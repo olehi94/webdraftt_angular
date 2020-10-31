@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,9 +6,11 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-  @Output() message: EventEmitter<string> = new EventEmitter<string>();
+  @Input() messageChild: string;
+  @Output() changeMessageChild: EventEmitter<string> = new EventEmitter<string>();
 
-  sendMessage(): void {
-    this.message.emit('Child value');
+  setMessage(): void {
+    this.messageChild = 'Message from Matvey';
+    this.changeMessageChild.emit(this.messageChild);
   }
 }

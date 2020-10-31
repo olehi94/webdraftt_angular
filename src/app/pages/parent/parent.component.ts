@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
-  message: string;
+  messageParent: string;
+
+  changeMessage(): void {
+    this.messageParent = 'Message from Oleh';
+  }
 
   setMessage(message: string): void {
-    this.message = message;
+    this.messageParent = message;
   }
+
 }

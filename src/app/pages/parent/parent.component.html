@@ -1,3 +1,6 @@
-<p>{{message || '-'}}</p>
-<app-child (message)="setMessage($event)"></app-child>
+<p>{{messageParent || 'empty message parent'}}</p>
+<button (click)="changeMessage()">Set message from parent</button>
+<hr>
 
+
+<app-child [messageChild]="messageParent" (changeMessageChild)="setMessage($event)"></app-child>
