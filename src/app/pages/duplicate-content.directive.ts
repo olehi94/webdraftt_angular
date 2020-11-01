@@ -4,8 +4,7 @@ import {AfterViewInit, Directive, ElementRef, HostListener, Input, TemplateRef, 
   selector: '[appDuplicateContent]'
 })
 export class DuplicateContentDirective implements AfterViewInit {
-
-  @Input() duplicateContent = false;
+  @Input('appDuplicateContent') duplicateContent = false;
 
   private contentWasDuplicated = false;
 
@@ -14,7 +13,9 @@ export class DuplicateContentDirective implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-
+    if (this.duplicateContent && !this.contentWasDuplicated) {
+      this.vc.insert(this.vc.createEmbeddedView(this.tpl));
+      this.contentWasDuplicated = true;
+    }
   }
-
 }
