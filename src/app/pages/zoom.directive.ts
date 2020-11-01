@@ -4,7 +4,7 @@ import {Directive, ElementRef, HostListener, Input, Renderer2} from '@angular/co
   selector: '[appZoom]'
 })
 export class ZoomDirective {
-  @Input() zoomSize: number | string;
+  @Input('appZoom') zoomSize: number | string;
 
   private readonly defaultSize: number | string;
 
