@@ -4,17 +4,16 @@ import {Directive, ElementRef, HostListener, Input, Renderer2} from '@angular/co
   selector: '[appZoom]'
 })
 export class ZoomDirective {
+  @Input() zoomSize: number | string;
 
   private readonly defaultSize: number | string;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
-    console.log(renderer);
-    // this.defaultSize = el.nativeElement.style.fontSize.replace('px', '');
     this.defaultSize = getComputedStyle(el.nativeElement).fontSize.replace('px', '');
   }
 
   @HostListener('mouseover') onMouseEnter(): void {
-    this.setFontSize(20);
+    this.setFontSize(this.zoomSize);
   }
 
   @HostListener('mouseout') onMouseLeave(): void {
