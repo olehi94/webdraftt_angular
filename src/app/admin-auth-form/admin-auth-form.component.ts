@@ -13,8 +13,8 @@ export class AdminAuthFormComponent {
     passwordInput: ''
   };
 
-  logInputState(inputOne: any, inputTwo): void {
-    console.log(inputOne, inputTwo);
+  logInputState(...inputs: any[]): void {
+    console.log(inputs);
   }
 
   logFormState(form: NgForm): void {

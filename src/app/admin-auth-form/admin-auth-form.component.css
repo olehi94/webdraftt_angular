@@ -4,6 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .admin-auth__label {
   width: 450px;
   display: flex;
