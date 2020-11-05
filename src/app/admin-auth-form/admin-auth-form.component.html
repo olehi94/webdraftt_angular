@@ -21,7 +21,7 @@
         </ul>
       </div>
     </label>
-  <button type="submit" [ngClass]="" [disabled]="login.invalid || password.invalid"
+  <button type="submit" [disabled]="login.invalid || password.invalid"
           (click)="logInputState(login, password)"
           class="admin-auth__btn">Login</button>
 </form>
