@@ -60,7 +60,7 @@
   list-style-type: none;
 }
 
-.admin-auth__input.ng-invalid + .admin-auth__errors-container .admin-auth__error--incorrect {
+.admin-auth__input.ng-invalid:not(.empty) + .admin-auth__errors-container .admin-auth__error--incorrect {
   display: block;
 }
 
