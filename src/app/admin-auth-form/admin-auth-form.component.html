@@ -2,7 +2,8 @@
     <label class="admin-auth__label">Login
       <div>
         <input type="text" [(ngModel)] = "adminAuthForm.loginInput" #login="ngModel"
-               class="admin-auth__input" name="login" placeholder="example@test.com" required>
+               class="admin-auth__input" [ngClass]="{'empty': !login.value}"
+               name="login" placeholder="example@test.com" required pattern="^[a-zA-Z]+$">
         <ul class="admin-auth__errors-container">
           <li class="admin-auth__error admin-auth__error--enter">*enter</li>
           <li class="admin-auth__error admin-auth__error--incorrect">*incorrect</li>
@@ -12,7 +13,8 @@
     <label class="admin-auth__label">Password
       <div>
         <input type="password" [(ngModel)] = "adminAuthForm.passwordInput" #password="ngModel"
-               class="admin-auth__input" name="password" placeholder="qwerty" required>
+               class="admin-auth__input" [ngClass]="{'empty': !password.value}"
+               name="password" placeholder="qwerty" required pattern="^[a-zA-Z0-9]{6,}">
         <ul class="admin-auth__errors-container">
           <li class="admin-auth__error admin-auth__error--enter">*enter</li>
           <li class="admin-auth__error admin-auth__error--incorrect">*incorrect</li>

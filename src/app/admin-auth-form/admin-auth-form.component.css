@@ -62,3 +62,7 @@
 .admin-auth__input.ng-invalid + .admin-auth__errors-container .admin-auth__error--incorrect {
   display: block;
 }
+
+.admin-auth__input.empty + .admin-auth__errors-container .admin-auth__error--enter {
+  display: block;
+}
