@@ -1,0 +1,64 @@
+.admin-auth__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.admin-auth__label {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.admin-auth__input {
+  width: 300px;
+  position: relative;
+  top: -6px;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  outline: none;
+  transition: .5s;
+}
+
+.admin-auth__input.ng-invalid {
+  border-color: red;
+}
+
+.admin-auth__input::placeholder {
+  color: lightgray;
+}
+
+.admin-auth__btn {
+  width: 150px;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  margin-left: 126px;
+}
+
+.admin-auth__btn:not(:disabled):hover {
+  background-color: darkgray;
+  border-color: gray;
+  cursor: pointer;
+}
+
+.admin-auth__errors-container {
+  padding: 0;
+  margin: 0;
+}
+
+.admin-auth__errors-container > .admin-auth__error {
+  display: none;
+  color: red;
+  font-size: 16px;
+  list-style-type: none;
+}
+
+.admin-auth__input.ng-invalid + .admin-auth__errors-container .admin-auth__error--incorrect {
+  display: block;
+}

@@ -1,0 +1,25 @@
+<form class="admin-auth__form" #form="ngForm" (ngSubmit)="logFormState(form)">
+    <label class="admin-auth__label">Login
+      <div>
+        <input type="text" [(ngModel)] = "adminAuthForm.loginInput" #login="ngModel"
+               class="admin-auth__input" name="login" placeholder="example@test.com" required>
+        <ul class="admin-auth__errors-container">
+          <li class="admin-auth__error admin-auth__error--enter">*enter</li>
+          <li class="admin-auth__error admin-auth__error--incorrect">*incorrect</li>
+        </ul>
+      </div>
+    </label>
+    <label class="admin-auth__label">Password
+      <div>
+        <input type="password" [(ngModel)] = "adminAuthForm.passwordInput" #password="ngModel"
+               class="admin-auth__input" name="password" placeholder="qwerty" required>
+        <ul class="admin-auth__errors-container">
+          <li class="admin-auth__error admin-auth__error--enter">*enter</li>
+          <li class="admin-auth__error admin-auth__error--incorrect">*incorrect</li>
+        </ul>
+      </div>
+    </label>
+  <button type="submit" [ngClass]="" [disabled]="login.invalid || password.invalid"
+          (click)="logInputState(login.invalid, password.invalid)"
+          class="admin-auth__btn">Login</button>
+</form>
